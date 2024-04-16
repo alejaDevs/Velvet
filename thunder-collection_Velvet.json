@@ -1,0 +1,302 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Velvet",
+    "dateExported": "2024-04-16T05:38:17.875Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-04-13T21:05:42.833Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "Category",
+            "containerId": "",
+            "created": "2024-04-16T04:04:44.246Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "873f94bd-109e-4fbe-b44d-e1eca927a399",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "New User",
+            "url": "/user/newUser",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-13T21:05:51.359Z",
+            "modified": "2024-04-16T02:24:28.796Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Rene"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Galvez"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "87654321"
+                    },
+                    {
+                        "name": "email",
+                        "value": "rgalvez-2022060@kinal.edu.gt"
+                    },
+                    {
+                        "name": "password",
+                        "value": "holahola"
+                    },
+                    {
+                        "name": "role",
+                        "value": "",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a1adb6b4-109a-46b8-a38a-5280a170717b",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "Update User",
+            "url": "/user/updateUser/661af9b25c5fdeaa40e55623",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-13T22:05:43.516Z",
+            "modified": "2024-04-16T03:00:30.418Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Lester"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Ramirez",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f585bad4-996d-4dee-9b95-9008f6d0ea5b",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "Delete User",
+            "url": "/user/deleteUser/661de7935089b0c13974e515",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-04-13T22:08:13.564Z",
+            "modified": "2024-04-16T02:56:17.033Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "34fcf6c1-88d1-4f57-9d87-eb24d19c206d",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "Search User",
+            "url": "/user/searchUser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-04-13T22:09:03.239Z",
+            "modified": "2024-04-16T03:00:41.652Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "Lester"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1894ad8f-9991-45b3-9484-4bef0fe0ebcd",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "List Users",
+            "url": "/user/listUser",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-13T22:11:10.657Z",
+            "modified": "2024-04-13T22:13:10.171Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a653b3ac-e68c-42fe-8c9f-16972a2fcb1d",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "6b7a264b-e061-4ecb-9304-ec7eaf595711",
+            "name": "Login",
+            "url": "/user/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-04-16T02:34:44.060Z",
+            "modified": "2024-04-16T02:55:23.992Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "email",
+                        "value": "rgalvez-2022060@kinal.edu.gt",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "phone",
+                        "value": "87654321"
+                    },
+                    {
+                        "name": "password",
+                        "value": "holahola"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "495dfe88-f9a9-4591-bd13-ce04a7a99d0d",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "Add Category",
+            "url": "/category/addCategory",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-04-16T04:04:51.389Z",
+            "modified": "2024-04-16T04:10:22.752Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "stars",
+                        "value": "4.5"
+                    },
+                    {
+                        "name": "nameCategory",
+                        "value": "Motel"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "eb69f802-5a0d-4d81-ac15-e87f777995b4",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "Delete Category",
+            "url": "/category/deleteCategory/661dfa2e8a917212b4476aec",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-04-16T04:10:41.082Z",
+            "modified": "2024-04-16T04:30:05.864Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "88083c17-1f1a-4599-8a11-cdb98a1fe955",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "Update Category",
+            "url": "/category/updateCategory/661dfa2e8a917212b4476aec",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-04-16T04:11:08.629Z",
+            "modified": "2024-04-16T04:14:38.231Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "stars",
+                        "value": "",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "nameCategory",
+                        "value": "Casa"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fbe3f497-6dd0-4ef2-9157-640a1c8a7ebe",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "List Categories",
+            "url": "/category/listCategories",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-04-16T04:16:32.076Z",
+            "modified": "2024-04-16T04:16:45.429Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f8ae528c-5c7a-4005-9e55-dfc60d8c77fb",
+            "colId": "e84ee2ec-cff2-44aa-8f9f-abbc0d8ed21e",
+            "containerId": "9b88a325-3667-4890-88be-536593a66c35",
+            "name": "Search Category",
+            "url": "/category/searchCategory",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-04-16T04:17:05.319Z",
+            "modified": "2024-04-16T04:21:17.742Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "Hotel"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2880"
+        }
+    }
+}
