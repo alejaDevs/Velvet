@@ -14,7 +14,7 @@ export const connect = async ()=>{
         mongoose.connection.on('disconnected', ()=> console.log('MongoDB | disconnected'))
         mongoose.connection.on('reconnected', ()=> console.log('MongoDB | reconnected to mongoDB'))
 
-        await mongoose.connect('mongodb://localhost:27017/Velvet');
+        await mongoose.connect('mongodb://localhost:27017/Velvet')
         console.log('Connected to database')
     } catch (error) {
         console.log('Database connection failed',error)
