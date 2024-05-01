@@ -18,3 +18,13 @@ export const validateJwt = async(req, res, next) =>{
         return res.status(401).send({message: 'Unauthorized'})
     }
 }
+export const isAdmin = async(req, res, next)=>{
+    try {
+        let {role, username} = req.user
+        if(!role || role !== 'ADMIN')  return res.status(403).send({message: `You dont have access | username ${username}`})
+        next()
+    } catch (error) {
+        console.error(err)
+        return res.status(401).send({message: 'Unauthorized role'})
+    }
+}

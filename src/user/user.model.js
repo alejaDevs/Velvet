@@ -22,6 +22,13 @@ const userSchema = Schema({
         required: [true, 'Please enter your email'],
         unique: [true, 'They have already registered with this email']
     },
+    DPI: {
+        type: String,
+        required: [true, 'Please enter your DPI'],
+        unique: [true, 'They have already registered with this DPI'],
+        maxLength: [13, 'The phone number cannot be at least 8 digits long.'],
+        minLength: [13, 'The phone number cannot be at least 8 digits long.']
+    },
     password:{
         type: String,
         required: [true, 'Please enter your password'],
@@ -31,7 +38,15 @@ const userSchema = Schema({
         type: String,
         enum:  ['ADMIN', 'CLIENT'],
         default: 'CLIENT'
-    }
+    }, 
+    methodOfPay: [{
+        type: Schema.Types.ObjectId,
+        ref:'methodOfPayload'
+    }],
+    reservation: [{
+        type: Schema.Types.ObjectId,
+        ref:'reservation'
+    }] 
 },{
     versionKey: false
 })

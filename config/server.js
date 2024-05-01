@@ -5,6 +5,12 @@ import morgan from 'morgan'
 import {config} from 'dotenv'
 import userRoutes from '../src/user/user.routes.js'
 import categoryRoutes from '../src/category/category.routes.js'
+import hotelRoutes from '../src/Hotel/hotel.routes.js'
+import reviewRoutes from '../src/Review/review.routes.js'
+import roomRoutes from '../src/room/room.routes.js'
+import reservationRoutes from '../src/reservation/reservation.routes.js'
+import methodOfPayRoutes from '../src/methodOfPay/methodOfPay.routes.js'
+import eventRoutes from '../src/event/event.routes.js'
 
 const server = express()
 config()
@@ -18,6 +24,12 @@ server.use(helmet())
 
 server.use('/user', userRoutes)
 server.use('/category', categoryRoutes)
+server.use('/hotel', hotelRoutes)
+server.use('/review', reviewRoutes)
+server.use('/room', roomRoutes)
+server.use('/reservation', reservationRoutes)
+server.use('/methodOfPay', methodOfPayRoutes)
+server.use('/event', eventRoutes)
 
 export const initServer = async () => {
     server.listen(port, () => {

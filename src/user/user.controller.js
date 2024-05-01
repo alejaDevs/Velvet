@@ -32,6 +32,7 @@ export const login = async (req, res) => {
 export const newUser = async (req, res) => {
     try {
         let data = req.body
+        console.log(data)
         data.password = await encrypt(data.password)
         let existsEmail = await User.findOne({ email: data.email })
         if (existsEmail) return res.status(409).send({ msg: `They have already registered with the email: ${data.email}` })
@@ -40,6 +41,7 @@ export const newUser = async (req, res) => {
         if (existsPhone) return res.status(409).send({ msg: `They have already registered with the phone number: ${data.phone}` })
 
         let user = new User(data)
+        console.log(data)
         await user.save()
         return res.send({ msg: 'Has been added with success' })
     } catch (error) {
