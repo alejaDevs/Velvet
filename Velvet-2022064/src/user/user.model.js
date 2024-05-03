@@ -31,7 +31,15 @@ const userSchema = Schema({
         type: String,
         enum:  ['ADMIN', 'CLIENT'],
         default: 'CLIENT'
-    }
+    }, 
+    methodOfPay: [{
+        type: Schema.Types.ObjectId,
+        ref:'methodOfPayload'
+    }],
+    reservation: [{
+        type: Schema.Types.ObjectId,
+        ref:'reservation'
+    }] 
 },{
     versionKey: false
 })

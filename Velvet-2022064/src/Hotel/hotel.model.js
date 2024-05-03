@@ -1,6 +1,6 @@
-import { Schema, model, version } from "mongoose";
+ import { Schema, model} from "mongoose";
 
-const hotelSchema = Schema({
+const hotelSchema = new Schema({
     name:{
         type:String,
         required: true,
@@ -67,6 +67,10 @@ const hotelSchema = Schema({
     review:[{
             type:Schema.ObjectId,
             ref:'review',
+    }],
+    roomId: [{
+        type: Schema.ObjectId,
+        ref: 'room'
     }]
 },
     {

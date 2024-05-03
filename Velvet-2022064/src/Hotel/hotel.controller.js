@@ -15,11 +15,11 @@ export const add = async(req, res)=>{
     try {
         let data = req.body
         let featured_services = {
-            wifi: data.wifi ? "Y" : "N",
-            petFriendly: data.petFriendly ? "Y" : "N",
-            pool_Spa: data.pool_Spa ? "Y" : "N",
-            gym: data.gym ? "Y" : "N",
-            daily_Housekeeping: data.daily_Housekeeping ? "Y" : "N"
+            wifi: data.wifi,
+            petFriendly: data.petFriendly,
+            pool_Spa: data.pool_Spa,
+            gym: data.gym,
+            daily_Housekeeping: data.daily_Housekeeping
         };
         // Asignar el objeto de servicios al objeto de datos
         data.featured_services = featured_services;
@@ -31,7 +31,7 @@ export const add = async(req, res)=>{
         return res.send({message: 'You have successfully added'});
     } catch (error) {
         // Enviar respuesta de error en caso de fallo
-        return res.status(500).send({message: 'Error registering user', error});
+        return res.status(500).send({message: 'Error registering hotel', error});
     }
 }
 
@@ -72,7 +72,13 @@ export const deleteHotel = async(req, res)=>{
     }
 }
 
-export const list = async(req, res)=>{
-
+export const display = async(req, res)=>{
+    try {
+        let hotels = await Hotel.find().populate('review',['stars','description','user'])
+        return res.send(hotels)
+    } catch (error) {
+        console.error(error)
+        return res.status(500).send({message:'Error displaying hotels', error})
+    }
 }
 
