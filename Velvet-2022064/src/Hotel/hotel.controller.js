@@ -74,7 +74,7 @@ export const deleteHotel = async(req, res)=>{
 
 export const display = async(req, res)=>{
     try {
-        let hotels = await Hotel.find().populate('review',['stars','description','user'])
+        let hotels = await Hotel.find().populate('review',['stars','description','user']).populate('room',['capacity','price'])
         return res.send(hotels)
     } catch (error) {
         console.error(error)
