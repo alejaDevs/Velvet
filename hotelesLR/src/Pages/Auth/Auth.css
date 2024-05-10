@@ -1,0 +1,40 @@
+.login{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 45em;
+  background-color: rgb(226, 218, 218);
+  width: 30em;
+  height: 30em;
+  border-radius: 20em;
+}
+
+.register{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30em;
+  margin-top: -6em;
+  width: 60em;
+  height: 45em;
+  border-radius: 5em 5em;
+  background-color: rgb(216, 210, 203);
+
+}
+
+.imgLogo{
+    margin-left: 6em;
+}
+
+.btnRegister{
+    background-color: rgb(46, 129, 197);
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    margin-left: 1em;
+    height: 2.6em;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    
+}
